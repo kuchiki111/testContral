@@ -18,14 +18,24 @@ public class FourthActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_fourth);
-		Button button = (Button) findViewById(R.id.button1);
+		Button button1 = (Button) findViewById(R.id.button1);
+		Button button2 = (Button) findViewById(R.id.button2);
 		
-		button.setOnClickListener(new View.OnClickListener() {
+		button2.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				Toast toast = new Toast(FourthActivity.this);
-				toast.makeText(FourthActivity.this, "test", Toast.LENGTH_SHORT);
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(FourthActivity.this,FifthActivity.class);
+				startActivity(intent);
+			}
+		});
+		
+		button1.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				Toast toast = Toast.makeText(FourthActivity.this, "test", Toast.LENGTH_SHORT);
 				LinearLayout toastLaouut = (LinearLayout) toast.getView();
 				ImageView img = new ImageView(getApplicationContext());
 				img.setImageResource(R.drawable.ic_launcher);

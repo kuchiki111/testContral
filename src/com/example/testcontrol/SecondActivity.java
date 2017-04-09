@@ -18,10 +18,9 @@ public class SecondActivity extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_second);
-		final 
-		EditText edittext = (EditText) findViewById(R.id.editText1);
-		CheckBox checkbox = (CheckBox) findViewById(R.id.checkbox);
+		setContentView(R.layout.activity_second); 
+		final EditText edittext = (EditText) findViewById(R.id.editText1);
+		CheckBox checkbox = (CheckBox) findViewById(R.id.checkBox1);
 		Button button = (Button) findViewById(R.id.button1);
 		
 		button.setOnClickListener(new View.OnClickListener() {
@@ -44,8 +43,10 @@ public class SecondActivity extends ActionBarActivity {
 				else{
 					edittext.setInputType(0x81);
 				}
+				
 			}
 		});
+		
 
 	}
 }
